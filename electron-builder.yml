@@ -1,0 +1,12 @@
+appId: tech.jsenyitko.app
+productName: Athens Attractions
+copyright: Copyright © 2022 Jack Senyitko
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+publish: null
