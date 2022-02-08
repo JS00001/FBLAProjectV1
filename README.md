@@ -11,6 +11,16 @@
 **Location Images**: https://pixabay.com/
 
 
+## Libraries
+
+**NextJS** - Frontend framework used for rendering web applications.
+**Nextron** - Fork of ElectronJS; Used for rendering the NextJS frontend as an executable application.
+**TailwindCSS** - Used for styling of the frontend.
+**React Icons** - Icon libary used.
+**NextUI** - Frontend component library used for the location cards.
+**Redux** - Used for global state management. (Stores the selected filters and the data)
+**React-Redux** - Used to update components when the global redux state is updated. 
+
 ## Setup
 1. Download the latest release from https://github.com/JS00001/fbla-project-exe/releases
 2. Run the EXE to install the program. 
