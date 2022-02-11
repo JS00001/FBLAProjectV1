@@ -2,6 +2,7 @@ import React from 'react';
 import Card from './Card';
 import Select from './Select';
 import Options from '../data/options';
+import { Button } from '@nextui-org/react';
 import { useSelector } from 'react-redux';
 
 
@@ -52,9 +53,18 @@ export default function Sidebar() {
                     })}
                 </div>
 
+                
+
                 {/* Sidebar result cards */}
                 <div>
-                    <h4>{data.length} Result(s)</h4>
+                    <h4>
+                        {data.length} Result(s)
+                    </h4>
+                    <Button css={{width:'100%'}}>
+                        Download Results
+                    </Button>
+
+
                     {data.map((data, i) => {
                         return (
                             <Card key={i} data={data} subtitle={`${data.Distance} miles away`} />

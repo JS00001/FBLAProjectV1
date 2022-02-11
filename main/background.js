@@ -1,4 +1,4 @@
-import { app, screen } from 'electron';
+import { app, ipcMain, screen } from 'electron';
 import serve from 'electron-serve';
 import { createWindow } from './helpers';
 
@@ -20,6 +20,14 @@ if (isProd) {
 
   mainWindow.setMenu(null);
   mainWindow.setFullScreen(true)
+
+  ipcMain.on('minimize', () => {
+    mainWindow.minimize();
+  })
+
+  ipcMain.on('close', () => {
+    mainWindow.close();
+  })
 
   if (isProd) {
     await mainWindow.loadURL('app://./home.html');

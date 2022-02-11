@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Taskbar from "../components/Taskbar";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import Empty from "../components/Empty";
@@ -16,6 +17,8 @@ export default function Home() {
             <Head>
                 <title>Athens Attractions</title>
             </Head>
+
+            <Taskbar />
 
             <Navbar />
             
