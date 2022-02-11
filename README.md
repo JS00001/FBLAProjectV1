@@ -1,38 +1,34 @@
-<p align="center"><img src="https://i.imgur.com/P08L8HO.png"></p>
+![Group 2Mockup](https://user-images.githubusercontent.com/49812749/152889941-f05e6250-6892-48a2-afae-e0527d979d92.png)
 
-## Usage
 
-### Create an App
+# Athens Attractions
 
-```
-# with npx
-$ npx create-nextron-app my-app --example with-javascript-tailwindcss
+## Sources
+**Icons**: https://react-icons.github.io/react-icons/icons?name=ri
 
-# with yarn
-$ yarn create nextron-app my-app --example with-javascript-tailwindcss
+**Empty State PNG's**: https://themeisle.com/illustrations/
 
-# with pnpx
-$ pnpx create-nextron-app my-app --example with-javascript-tailwindcss
-```
+**Location Images**: https://pixabay.com/
 
-### Install Dependencies
 
-```
-$ cd my-app
+## Libraries
 
-# using yarn or npm
-$ yarn (or `npm install`)
+**NextJS** - Frontend framework used for rendering web applications. 
 
-# using pnpm
-$ pnpm install --shamefully-hoist
-```
+**Nextron** - Fork of ElectronJS; Used for rendering the NextJS frontend as an executable application.
 
-### Use it
+**TailwindCSS** - Used for styling of the frontend. 
 
-```
-# development mode
-$ yarn dev (or `npm run dev` or `pnpm run dev`)
+**React Icons** - Icon libary used.
 
-# production build
-$ yarn build (or `npm run build` or `pnpm run build`)
-```
+**NextUI** - Frontend component library used for the location cards.
+
+**Redux** - Used for global state management. (Stores the selected filters and the data)
+
+**React-Redux** - Used to update components when the global redux state is updated. 
+
+
+## Setup
+1. Download the latest release from https://github.com/JS00001/fbla-project-exe/releases
+2. Run the EXE to install the program. 
+3. Use the application as you please.
