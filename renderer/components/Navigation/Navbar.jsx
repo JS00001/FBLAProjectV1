@@ -7,8 +7,12 @@ import { RiQuestionLine } from 'react-icons/ri';
 export default function Navbar({updateTheme}) {
     const [open, setOpen] = React.useState(false);
     
-    const updateModal = () => {
+    const onModalClick = () => {
         setOpen(!open);
+    }
+    
+    const onThemeClick = () => {
+        updateTheme()
     }
 
     return (
@@ -21,11 +25,11 @@ export default function Navbar({updateTheme}) {
                 </div>
 
                 <div className='flex items-center'>
-                    <IconButton onClick={updateModal}>
+                    <IconButton onClick={onModalClick}>
                         <RiQuestionLine size={30}/>
                     </IconButton>
 
-                    <IconButton onClick={() => updateTheme()}>
+                    <IconButton onClick={onThemeClick}>
                         <RiSunLine size={30}/>
                     </IconButton>
 
