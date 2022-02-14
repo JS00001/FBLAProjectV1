@@ -12,7 +12,7 @@ export default function Sidebar() {
     const [data, setData] = React.useState(filterReducer.Data);
 
 
-    /* When the filter updates, update the dataset */
+    /* When the filter updates, update the dataset being rendered */
     React.useEffect(() => {
         setData(filterReducer.Data.filter(data => (
              filter(data, filterReducer)

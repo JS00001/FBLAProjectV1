@@ -18,7 +18,7 @@ export default function Page({ data }) {
         navigator.clipboard.writeText(data.address);
         setTimeout(() => {
             setCopyMessage('Click to copy');
-        }, 2000);
+        }, 1000);
     }
 
     return (

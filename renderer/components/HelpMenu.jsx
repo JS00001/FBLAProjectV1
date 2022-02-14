@@ -10,32 +10,27 @@ export default function HelpMenu({open, onClose}) {
             onClose={onClose}
         >
             <Modal.Header>
-                <span className='text-xl font-semibold'>Help Menu</span>
+                <span className='text-xl font-semibold'>Help</span>
             </Modal.Header>
             <Modal.Body>
                 <Collapse.Group splitted>
                     <Collapse title={<h4>How Do I Filter Results?</h4>}>
                         <Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat.
+                            Filtering was created with the user experience in mind. To filter 
+                            through locations, the user can select options from the various dropdowns.
+                            The more filters that are selected, the less locations there will be.
                         </Text>
                     </Collapse>
                     <Collapse title={<h4>How Do I Reset Filters</h4>}>
                         <Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat.
+                            The user is able to reset filters by selecting the placeholder option.
+                            Open the dropdown and then select the topmost value in order to remove the 
+                            previously selected filter. 
                         </Text>
                     </Collapse>
                     <Collapse title={<h4>Am I Able To Export Locations?</h4>}>
                         <Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat.
+                            Coming soon...
                         </Text>
                     </Collapse>
                 </Collapse.Group>

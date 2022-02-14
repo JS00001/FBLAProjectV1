@@ -21,6 +21,10 @@ export default function Select({header, options}) {
             </option>
             
             {options.map(({name, key}) => {
+                /* 
+                    For every option in each category, render the option
+                    with a data-value that is more easily worked with.
+                */ 
                 return (
                     <option data-value={key} key={key}>
                         {name}
