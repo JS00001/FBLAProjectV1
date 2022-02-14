@@ -44,3 +44,13 @@
 4. Run `npm install`
 5. Once all dependencies are installed, run `npm run build`
 6. A folder named `dist` will be created it, inside of it will be the compiled program, `Athens Attactions 1.0.0 install.exe`
+
+
+## Docs
+
+**File Structure**
+| Folder | Purpose | Author |
+| --- | --- | --- | 
+| `resources` | Assets for the Nextron build process | Our Team |
+| `renderer`| NextJS Frontend | Our Team |
+| `main` | Nextron Application | [Nextron](https://github.com/saltyshiomix/nextron) (Unless Commented Otherwise) |
