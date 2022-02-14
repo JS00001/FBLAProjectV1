@@ -17,7 +17,7 @@ export default function Navbar({updateTheme}) {
 
     return (
         <>
-            <HelpMenu open={open} onClose={updateModal}/>
+            <HelpMenu open={open} onClose={onModalClick}/>
             <div className='p-4 border-b-2 border-slate-100 flex justify-between dark:border-gray-800'>
                 <div className='flex items-center'>
                     <img src='/fbla.png' className='w-24'/>
