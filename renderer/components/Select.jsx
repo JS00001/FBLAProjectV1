@@ -15,7 +15,7 @@ export default function Select({header, options}) {
     }
 
     return (
-        <select defaultValue={header} className="m-1 px-4 py-1 rounded-full border-2 border-gray-100 bg-white w-30 hover:cursor-pointer hover:bg-gray-50" onChange={(onChange)}>
+        <select defaultValue={header} className="m-1 px-4 py-1 rounded-full border-2 border-gray-100 bg-white w-30 hover:cursor-pointer hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-800 dark:text-gray-500 dark:hover:bg-gray-600" onChange={(onChange)}>
             <option data-value={0}>
                 {header}
             </option>

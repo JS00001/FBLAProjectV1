@@ -1,12 +1,12 @@
 import React from 'react';
 import IconGroup from './IconGroup';
-import {Tooltip} from '@nextui-org/react';
-import {RiExchangeDollarFill} from 'react-icons/ri';
-import {RiErrorWarningLine} from 'react-icons/ri';
-import {RiBarChart2Line} from 'react-icons/ri';
-import {RiMapPinFill} from 'react-icons/ri';
-import {RiMapPinLine} from 'react-icons/ri';
-import {RiStarLine} from 'react-icons/ri';
+import { Tooltip } from '@nextui-org/react';
+import { RiExchangeDollarFill } from 'react-icons/ri';
+import { RiErrorWarningLine } from 'react-icons/ri';
+import { RiBarChart2Line } from 'react-icons/ri';
+import { RiMapPinFill } from 'react-icons/ri';
+import { RiMapPinLine } from 'react-icons/ri';
+import { RiStarLine } from 'react-icons/ri';
 
 
 export default function Page({ data }) {
@@ -26,14 +26,14 @@ export default function Page({ data }) {
 
             {/* Location Category Badge */}
             <div>
-                <h5 className='py-1 px-6 rounded-full bg-blue-200 w-min text-blue-500 text-sm font-semibold'>
+                <h5 className='py-1 px-6 rounded-full bg-blue-200 w-min text-blue-500 text-sm font-semibold dark:bg-blue-900'>
                     {data.Category}
                 </h5>
             </div>
 
             {/* Primary Location Details (Name, Address) */}
             <div>
-                <h2 className='font-bold tracking-normal flex'>
+                <h2 className='font-bold tracking-normal flex dark:text-white'>
                     {data.title}
                     {data.Open == "no" && 
                         <span className='flex text-red-400 text-lg font-normal items-center ml-10 mt-2'> 

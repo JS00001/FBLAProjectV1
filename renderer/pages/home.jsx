@@ -1,34 +1,41 @@
 import React from "react";
 import Head from "next/head";
-import Taskbar from "../components/Taskbar";
-import Navbar from "../components/Navbar";
+import { useSelector } from 'react-redux';
+
+import Taskbar from "../components/Navigation/Taskbar";
+import Navbar from "../components/Navigation/Navbar";
 import Sidebar from "../components/Sidebar";
 import Empty from "../components/Empty";
 import Page from '../components/Page';
-import { useSelector } from 'react-redux';
 
 
 export default function Home() {
 
     const activeReducer = useSelector(state => state.activeReducer);
 
+    const [theme, setTheme] = React.useState('light');
+
     return (
-        <div className="flex flex-col h-screen select-none">
-            <Head>
-                <title>Athens Attractions</title>
-            </Head>
+        <html className={theme}>
 
-            <Taskbar />
+            <div className="flex flex-col h-screen select-none dark:bg-gray-900">
+                <Head>
+                    <title>Athens Attractions</title>
+                </Head>
 
-            <Navbar />
-            
-            <div className="flex flex-row h-full overflow-hidden">
-                <Sidebar />
-                <div className="flex-1">
-                    {!Object.keys(activeReducer).length && <Empty/>}
-                    {Object.keys(activeReducer).length && <Page data={activeReducer}/>}
+                <Taskbar />
+
+                <Navbar updateTheme={() => setTheme(theme == "dark" ? "light" : "dark")}/>
+                
+                <div className="flex flex-row h-full overflow-hidden">
+                    <Sidebar />
+                    <div className="flex-1">
+                        {!Object.keys(activeReducer).length && <Empty/>}
+                        {Object.keys(activeReducer).length && <Page data={activeReducer}/>}
+                    </div>
                 </div>
             </div>
-        </div>
+
+        </html>
     );
 }

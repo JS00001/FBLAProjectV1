@@ -15,10 +15,10 @@ export default function Taskbar() {
 
     return (
         <div className='flex justify-end'>
-            <span className='py-2 px-4 hover:bg-gray-100 text-lg cursor-pointer' onClick={minimizeWindow}>
+            <span className='py-2 px-4 hover:bg-gray-100 text-lg cursor-pointer dark:text-white dark:hover:bg-gray-700' onClick={minimizeWindow}>
                 <RiSubtractFill/>
             </span>
-            <span className='py-2 px-4 hover:bg-gray-100 text-lg cursor-pointer' onClick={closeWindow}>
+            <span className='py-2 px-4 hover:bg-gray-100 text-lg cursor-pointer dark:text-white dark:hover:bg-gray-700' onClick={closeWindow}>
                 <RiCloseFill/>
             </span>
         </div>

@@ -40,12 +40,12 @@ export default function Sidebar() {
 
 
     return (
-        <div className='w-1/5 border-r-2 border-slate-100 h-full overflow-y-scroll'>
+        <div className='w-1/5 border-r-2 border-slate-100 h-full overflow-y-scroll dark:border-gray-800'>
             <div className='p-12'>
 
                 {/* Sidebar header and options */}
                 <div className='pb-10 '>
-                    <h4>Sort by </h4>
+                    <h4 className='dark:text-white'>Sort by </h4>
                     {Options.map(({header, options}, i) => {
                         return (
                             <Select header={header} options={options} key={i} />
@@ -54,16 +54,11 @@ export default function Sidebar() {
                 </div>
 
                 
-
                 {/* Sidebar result cards */}
                 <div>
-                    <h4>
+                    <h4 className='dark:text-white'>
                         {data.length} Result(s)
                     </h4>
-                    <Button css={{width:'100%'}}>
-                        Download Results
-                    </Button>
-
 
                     {data.map((data, i) => {
                         return (
