@@ -13,13 +13,28 @@ if (isProd) {
 (async () => {
   await app.whenReady();
 
+//   const splashScreen = createWindow('splash', {
+//       width: 340,
+//       height: 500,
+//       frame: false
+//   })
+
+//   splashScreen.setAlwaysOnTop(true);
+//   splashScreen.loadURL(`file://${__dirname}/static/loading.html`);
+
   const mainWindow = createWindow('main', {
     width: 1344,
     height: 756,
+    show: false
   });
 
   mainWindow.setMenu(null);
   mainWindow.setFullScreen(true)
+
+  mainWindow.once('ready-to-show', () => {
+    // splashScreen.destroy();
+    mainWindow.show();
+  })
 
   ipcMain.on('minimize', () => {
     mainWindow.minimize();
