@@ -13,15 +13,7 @@ if (isProd) {
 (async () => {
   await app.whenReady();
 
-//   const splashScreen = createWindow('splash', {
-//       width: 340,
-//       height: 500,
-//       frame: false
-//   })
-
-//   splashScreen.setAlwaysOnTop(true);
-//   splashScreen.loadURL(`file://${__dirname}/static/loading.html`);
-
+  // Start code written by our team
   const mainWindow = createWindow('main', {
     width: 1344,
     height: 756,
@@ -31,19 +23,22 @@ if (isProd) {
   mainWindow.setMenu(null);
   mainWindow.setFullScreen(true)
 
+  // Once the NextJS app has loaded, render the application
   mainWindow.once('ready-to-show', () => {
-    // splashScreen.destroy();
     mainWindow.show();
   })
 
+  // When the frontend sends cue to minimize, minimize window
   ipcMain.on('minimize', () => {
     mainWindow.minimize();
   })
 
+  // When the frontend sends cue to close, close window
   ipcMain.on('close', () => {
     mainWindow.close();
   })
 
+  // End code written by our team
   if (isProd) {
     await mainWindow.loadURL('app://./home.html');
   } else {
