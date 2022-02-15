@@ -5,7 +5,7 @@
     margin-top: -20px;
     position: absolute;
     z-index: 19 !important;
-    animation: loading-bar-spinner 400ms linear infinite;
+    animation: loading-bar-spinner 500ms linear infinite;
 }
 
 #loading-bar-spinner.spinner .spinner-icon {
@@ -27,7 +27,7 @@ body {
     overflow: hidden;
 	background: linear-gradient(-60deg, #ee7752, #e73c7e, #0934c3, #018a6a);
 	background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
+	animation: gradient 3s ease infinite;
 	height: 100vh;
 }
 
