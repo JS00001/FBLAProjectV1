@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from './Card';
 import Select from './Select';
-import Options from '../data/options';
-import { Button } from '@nextui-org/react';
+import Download from './Download';
+import Options from '../../data/options';
 import { useSelector } from 'react-redux';
 
 
@@ -59,6 +59,8 @@ export default function Sidebar() {
                     <h4 className='dark:text-white'>
                         {data.length} Result(s)
                     </h4>
+
+                    <Download data={data}/>
 
                     {data.map((data, i) => {
                         return (

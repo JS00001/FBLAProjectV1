@@ -1,7 +1,7 @@
 import React from 'react';
 import Row from '@nextui-org/react/row';
 import CardUI from '@nextui-org/react/card';
-import { active } from '../actions';
+import { active } from '../../actions';
 import { useDispatch } from 'react-redux'; 
 
 

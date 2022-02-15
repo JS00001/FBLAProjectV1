@@ -1,5 +1,5 @@
 import React from 'react';
-import add from '../actions';
+import add from '../../actions';
 import { useDispatch } from 'react-redux';
 
 

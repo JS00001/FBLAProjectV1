@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 import Taskbar from "../components/Navigation/Taskbar";
 import Navbar from "../components/Navigation/Navbar";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/Sidebar/Sidebar";
 import Empty from "../components/Empty";
 import Page from '../components/Page';
 
