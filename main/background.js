@@ -1,5 +1,7 @@
 import { app, ipcMain, screen } from 'electron';
 import serve from 'electron-serve';
+import path from 'path';
+
 import { createWindow } from './helpers';
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -14,6 +16,25 @@ if (isProd) {
   await app.whenReady();
 
   // Start code written by our team
+  const splashWindow = createWindow('splash', {
+    width: 340,
+    height: 500,
+    frame: false,
+    show: false
+  })
+
+  splashWindow.setAlwaysOnTop(true);
+
+  if (isProd) 
+    splashWindow.loadURL('app://./splash.html');
+  else 
+    splashWindow.loadFile(`${path.join(__dirname, '../renderer/public/splash.html')}`);
+
+  splashWindow.once('ready-to-show', () => {
+    splashWindow.show();
+  });
+
+
   const mainWindow = createWindow('main', {
     width: 1344,
     height: 756,
@@ -25,6 +46,7 @@ if (isProd) {
 
   // Once the NextJS app has loaded, render the application
   mainWindow.once('ready-to-show', () => {
+    splashWindow.close();
     mainWindow.show();
   })
 
