@@ -3,10 +3,12 @@ import add from '../../actions';
 import { useDispatch } from 'react-redux';
 
 
-export default function Select({header, options}) {
+export default function Select({ header, options }) {
 
     const dispatch = useDispatch();
 
+
+    /* When a new option is selected, update the filter to the active option */
     const onChange = event => {
         let index = event.target.options.selectedIndex;
         let value = event.target.options[index].getAttribute('data-value');

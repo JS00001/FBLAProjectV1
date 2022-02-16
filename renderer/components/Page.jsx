@@ -13,6 +13,8 @@ export default function Page({ data }) {
 
     const [copyMessage, setCopyMessage] = React.useState('Click to copy');
  
+
+    /* Copy Data to Clipboard When Address Clicked */
     const onClick = () => {
         setCopyMessage('Copied!');
         navigator.clipboard.writeText(data.address);

@@ -1,23 +1,28 @@
 import React from 'react';
-import HelpMenu from '../HelpMenu';
+import HelpModal from '../Modals/HelpModal';
 import { RiSunLine } from 'react-icons/ri';
 import { RiQuestionLine } from 'react-icons/ri';
 
 
-export default function Navbar({updateTheme}) {
-    const [open, setOpen] = React.useState(false);
+export default function Navbar({ updateTheme }) {
     
-    const onModalClick = () => {
-        setOpen(!open);
+    const [helpOpen, setHelpOpen] = React.useState(false);
+    
+
+    /* Open help menu when help icon is clicked */
+    const updateModal = () => {
+        setHelpOpen(!helpOpen);
     }
     
+
+    /* Toggle theme between dark and light */
     const onThemeClick = () => {
         updateTheme()
     }
 
     return (
         <>
-            <HelpMenu open={open} onClose={onModalClick}/>
+            <HelpModal open={helpOpen} onClose={updateModal}/>
             <div className='p-4 border-b-2 border-slate-100 flex justify-between dark:border-gray-800'>
                 <div className='flex items-center'>
                     <img src='/fbla.png' className='w-24'/>
@@ -25,7 +30,7 @@ export default function Navbar({updateTheme}) {
                 </div>
 
                 <div className='flex items-center'>
-                    <IconButton onClick={onModalClick}>
+                    <IconButton onClick={updateModal}>
                         <RiQuestionLine size={30}/>
                     </IconButton>
 

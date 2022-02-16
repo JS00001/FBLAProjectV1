@@ -5,10 +5,13 @@ import { RiSubtractFill } from 'react-icons/ri';
 
 export default function Taskbar() {
 
+    /* When the '-' is clicked, minimize the program */
     const minimizeWindow = () => {
         ipcRenderer.send('minimize');
     }
 
+
+    /* When the 'X' is clicked, close the program */
     const closeWindow = () => {
         ipcRenderer.send('close');
     }

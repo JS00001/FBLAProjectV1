@@ -38,7 +38,6 @@ export default function Sidebar() {
         return valid;
     }
 
-
     return (
         <div className='w-1/5 border-r-2 border-slate-100 h-full overflow-y-scroll dark:border-gray-800'>
             <div className='p-12'>

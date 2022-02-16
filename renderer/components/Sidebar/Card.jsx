@@ -5,14 +5,15 @@ import { active } from '../../actions';
 import { useDispatch } from 'react-redux'; 
 
 
-export default function Card({
-    data,
-    subtitle,
-}) {
+export default function Card({ data, subtitle }) {
 
     const dispatch = useDispatch();
 
-    const handleClick = () => dispatch(active(data));
+
+    /* When card is clicked, set it as the active page */
+    const handleClick = () => {
+        dispatch(active(data));
+    }
 
     return (
         <div className='my-5'>

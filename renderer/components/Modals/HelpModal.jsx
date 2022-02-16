@@ -1,7 +1,7 @@
 import { Modal, Text, Collapse } from '@nextui-org/react';
 
 
-export default function HelpMenu({open, onClose}) {
+export default function HelpMenu({ open, onClose }) {
     return (
         <Modal 
             width='500px'
@@ -30,7 +30,9 @@ export default function HelpMenu({open, onClose}) {
                     </Collapse>
                     <Collapse title={<h4>Am I Able To Export Locations?</h4>}>
                         <Text>
-                            Coming soon...
+                            The user is able to export locations once they have selected the desired filters.
+                            Select the desired filters, and then click the button labeled "Export Locations".
+                            The user will be prompted to download a PDF file containing the locations.
                         </Text>
                     </Collapse>
                 </Collapse.Group>
