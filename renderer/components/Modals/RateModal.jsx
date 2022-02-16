@@ -2,7 +2,7 @@ import { Modal } from '@nextui-org/react';
 import { RiCloseCircleLine } from 'react-icons/ri';
 
 
-export default function HelpMenu({ open, onClose }) {
+export default function RateMenu({ open, onClose }) {
     return (
         <Modal 
             width='500px'

@@ -1,5 +1,6 @@
 import React from 'react';
 import fetch from 'node-fetch';
+import Store from 'electron-store';
 import RateModal from '../Modals/RateModal';
 import DownloadModal from '../Modals/DownloadModal';
 import { Button, Loading } from '@nextui-org/react';
@@ -15,18 +16,6 @@ export default function Download({ data }) {
     const [rateLimited, setRateLimited] = React.useState(false);
 
 
-    /* Open rate limit modal when rate limit occurs on request*/
-    const updateRateModal = () => {
-        setRateLimited(!rateLimited);
-    }
-
-
-    /* Open download modal when download occurs */
-    const updateDownloadModal = () => {
-        setDownloaded(!downloaded);
-    }
-
-
     /* Download Data as a PDF */
     const download = () => {
         setLoading(true);
@@ -40,21 +29,34 @@ export default function Download({ data }) {
         fetch('https://static.jsenyitko.tech/pdf', config)
         .then(async res => {     
             if (res.ok) {
+                const store = new Store();
                 const document = await res.text();
                 setUrl(document);
                 setLoading(false);
                 setDownloaded(true);
+
+                const storeDocument = {
+                    document: document,
+                    date: new Date().toLocaleString(),
+                    pdfstring: document.split('/').slice(-1)
+                }
+
+                if (store.get('documents')) 
+                    store.set('documents', [...store.get('documents'), storeDocument]);
+                else
+                    store.set('documents', [storeDocument]);
             } else {
                 setLoading(false);
-                updateRateModal();
+                setRateLimited(true);
             }
         })          
     }
 
     return (
         <>
-            <DownloadModal open={downloaded} onClose={updateDownloadModal} url={url}/>
-            <RateModal open={rateLimited} onClose={updateRateModal}/>
+            <DownloadModal open={downloaded} onClose={ () => setDownloaded(false) } url={url}/>
+            <RateModal open={rateLimited} onClose={ () => setRateLimited(false) }/>
+            
             <Button css={{width: '100%'}} onClick={download} disabled={loading}>
                 {loading && <Loading color="white" size="sm" />}
                 {!loading && 'Export Locations'}

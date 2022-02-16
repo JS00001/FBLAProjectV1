@@ -25,6 +25,7 @@
 | `NextUI` | NextJS component library used for the location cards | 
 | `Redux` | Used for global state management (Stores the location data and selected filters |
 | `React-Redux` | Used to update components when the redux state is updated | 
+| `Node-Fetch` | Used to make requests to PDF api |
 
 
 ## Setup

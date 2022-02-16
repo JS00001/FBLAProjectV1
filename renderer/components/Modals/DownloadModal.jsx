@@ -2,17 +2,19 @@ import { Button, Modal } from '@nextui-org/react';
 import { saveAs } from 'file-saver';
 
 
-export default function HelpMenu({ open, onClose, url}) {
+export default function DownloadMenu({ open, onClose, url}) {
 
     /* Download PDF as a file */
     const download = () => {
         saveAs(url, 'location.pdf');
+        onClose();
     }
 
 
     /* Copy link to clipboard */
     const copy = () => {
         navigator.clipboard.writeText(url);
+        onClose();
     }
 
     return (

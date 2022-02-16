@@ -7,10 +7,12 @@ import { RiBarChart2Line } from 'react-icons/ri';
 import { RiMapPinFill } from 'react-icons/ri';
 import { RiMapPinLine } from 'react-icons/ri';
 import { RiStarLine } from 'react-icons/ri';
+import Store from 'electron-store';
 
 
 export default function Page({ data }) {
 
+    const store = new Store();
     const [copyMessage, setCopyMessage] = React.useState('Click to copy');
  
 
