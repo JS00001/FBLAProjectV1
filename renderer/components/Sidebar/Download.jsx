@@ -1,19 +1,29 @@
 import React from 'react';
 import fetch from 'node-fetch';
 import RateModal from '../Modals/RateModal';
-import { saveAs } from "file-saver";
+import DownloadModal from '../Modals/DownloadModal';
 import { Button, Loading } from '@nextui-org/react';
 
 
 export default function Download({ data }) {
 
+    const [url, setUrl] = React.useState('');
     const [loading, setLoading] = React.useState(false);
+
+    /* Modals Open/Closed */
+    const [downloaded, setDownloaded] = React.useState(false);
     const [rateLimited, setRateLimited] = React.useState(false);
 
 
     /* Open rate limit modal when rate limit occurs on request*/
-    const updateModal = () => {
+    const updateRateModal = () => {
         setRateLimited(!rateLimited);
+    }
+
+
+    /* Open download modal when download occurs */
+    const updateDownloadModal = () => {
+        setDownloaded(!downloaded);
     }
 
 
@@ -31,18 +41,20 @@ export default function Download({ data }) {
         .then(async res => {     
             if (res.ok) {
                 const document = await res.text();
-                saveAs(document, 'locations.pdf');
+                setUrl(document);
                 setLoading(false);
+                setDownloaded(true);
             } else {
                 setLoading(false);
-                updateModal();
+                updateRateModal();
             }
         })          
     }
 
     return (
         <>
-            <RateModal open={rateLimited} onClose={updateModal}/>
+            <DownloadModal open={downloaded} onClose={updateDownloadModal} url={url}/>
+            <RateModal open={rateLimited} onClose={updateRateModal}/>
             <Button css={{width: '100%'}} onClick={download} disabled={loading}>
                 {loading && <Loading color="white" size="sm" />}
                 {!loading && 'Export Locations'}

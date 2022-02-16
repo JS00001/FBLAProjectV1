@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.2-beta.3",
+    "axios": "^0.26.0",
     "electron-serve": "^1.1.0",
     "electron-store": "^8.0.1",
     "file-saver": "^2.0.5",

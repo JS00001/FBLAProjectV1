@@ -2,6 +2,7 @@ import { app, ipcMain, screen } from 'electron';
 import serve from 'electron-serve';
 import path from 'path';
 
+
 import { createWindow } from './helpers';
 
 const isProd = process.env.NODE_ENV === 'production';
