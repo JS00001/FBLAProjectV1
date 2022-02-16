@@ -22,10 +22,11 @@
 | `Nextron` | Fork of ElectronJS; Used for rendering the NextJS Frontend as an application (exe) |
 | `TailwindCSS` | Used for styling the frontend |
 | `React Icons` | Library containing all icons used | 
-| `NextUI` | NextJS component library used for the location cards | 
+| `NextUI` | NextJS component library used for the UI | 
 | `Redux` | Used for global state management (Stores the location data and selected filters |
 | `React-Redux` | Used to update components when the redux state is updated | 
 | `Node-Fetch` | Used to make requests to PDF api |
+| `Electron-Store` | Used to store links to generated output reports |
 
 
 ## Setup
@@ -44,7 +45,7 @@
 3. Move the files into a folder, and open a command prompt in the folder.
 4. Run `npm install`
 5. Once all dependencies are installed, run `npm run build`
-6. A folder named `dist` will be created it, inside of it will be the compiled program, `Athens Attactions 1.0.0 install.exe`
+6. A folder named `dist` will be created it, inside of it will be the compiled program, `Athens Attactions x.x.x install.exe`
 
 
 ## Docs
@@ -55,3 +56,10 @@
 | `resources` | Assets for the Nextron build process | Our Team |
 | `renderer`| NextJS Frontend | Our Team |
 | `main` | Nextron Application | [Nextron](https://github.com/saltyshiomix/nextron) (Unless Commented Otherwise) |
+
+
+**Features**
+- Select filters to sort locations by.
+- Generate a cloud-stored PDF document containing all filtered locations.
+- View all reports that you have generated, and clear them.
+- Toggle the theme between light and dark.
