@@ -1,4 +1,4 @@
-import { app, ipcMain, screen } from 'electron';
+import { app, ipcMain, screen, shell } from 'electron';
 import serve from 'electron-serve';
 import path from 'path';
 
@@ -43,7 +43,7 @@ if (isProd) {
   });
 
   mainWindow.setMenu(null);
-  mainWindow.setFullScreen(true)
+  mainWindow.setFullScreen(true);
 
   // Once the NextJS app has loaded, render the application
   mainWindow.once('ready-to-show', () => {

@@ -37,7 +37,7 @@ export default function Download({ data }) {
 
                 const storeDocument = {
                     document: document,
-                    date: new Date().toLocaleString(),
+                    date: new Date().toLocaleString([], {timeStyle: 'short'}),
                     pdfstring: document.split('/').slice(-1)
                 }
 

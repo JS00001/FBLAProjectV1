@@ -21,7 +21,7 @@ export default function Navbar({ updateTheme }) {
             <div className='py-4 px-8 border-b-2 border-slate-100 flex justify-between dark:border-gray-800'>
                 <div className='flex items-center'>
                     <img src='/fbla.png' className='w-24'/>
-                    <h2 className='px-5 font-semibold tracking-tight dark:text-white'>Athens Attractions</h2>
+                    <h2 className='px-5 font-bold tracking-tighter text-gray-700 dark:text-white'>Athens Attractions</h2>
                 </div>
 
                 <div className='flex items-center'>
