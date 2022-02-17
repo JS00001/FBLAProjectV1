@@ -11,9 +11,10 @@ export default function Download({ data }) {
     const [url, setUrl] = React.useState('');
     const [loading, setLoading] = React.useState(false);
 
+
     /* Modals Open/Closed */
-    const [downloaded, setDownloaded] = React.useState(false);
-    const [rateLimited, setRateLimited] = React.useState(false);
+    const [downloadModal, setDownloadModal] = React.useState(false);
+    const [rateLimitModal, setRateLimitModal] = React.useState(false);
 
 
     /* Download Data as a PDF */
@@ -33,7 +34,7 @@ export default function Download({ data }) {
                 const document = await res.text();
                 setUrl(document);
                 setLoading(false);
-                setDownloaded(true);
+                setDownloadModal(true);
 
                 const storeDocument = {
                     document: document,
@@ -47,15 +48,15 @@ export default function Download({ data }) {
                     store.set('documents', [storeDocument]);
             } else {
                 setLoading(false);
-                setRateLimited(true);
+                setRateLimitModal(true);
             }
         })          
     }
 
     return (
         <>
-            <DownloadModal open={downloaded} onClose={ () => setDownloaded(false) } url={url}/>
-            <RateModal open={rateLimited} onClose={ () => setRateLimited(false) }/>
+            <DownloadModal open={downloadModal} onClose={ () => setDownloadModal(false) } url={url}/>
+            <RateModal open={rateLimitModal} onClose={ () => setRateLimitModal(false) }/>
             
             <Button css={{width: '100%'}} onClick={download} disabled={loading}>
                 {loading && <Loading color="white" size="sm" />}
