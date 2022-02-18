@@ -43,7 +43,7 @@ export default function Download({ data }) {
                 }
 
                 if (store.get('documents')) 
-                    store.set('documents', [...store.get('documents'), storeDocument]);
+                    store.set('documents', [storeDocument, ...store.get('documents')]);
                 else
                     store.set('documents', [storeDocument]);
             } else {

@@ -58,7 +58,7 @@ function DataPoint({ data: { document, date, pdfstring } }) {
     return (
         <div className='flex justify-between mt-4 bg-gray-100 p-4 rounded-lg'>
             <a className='w-full' onClick={() => copy(document)}>
-                <span className='text-xs mr-4'>{date}</span>
+                <span className='text-xs mr-4 text-gray-400'>{date}</span>
                 <span className='text-gray-800 text-sm font-medium'>{pdfstring}</span>
             </a>
             
