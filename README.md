@@ -1,6 +1,7 @@
-![Group 2Mockup](https://user-images.githubusercontent.com/49812749/152889941-f05e6250-6892-48a2-afae-e0527d979d92.png)
+![FblaMockup-LIGHT](https://user-images.githubusercontent.com/49812749/156910603-3cd1ab94-938e-4ff6-8534-fa2f6eeef3e8.png)
 
-![Mockup4](https://user-images.githubusercontent.com/49812749/153808133-32471928-e973-405b-bf23-142a1416fa4d.png)
+![FblaMockup_DARK](https://user-images.githubusercontent.com/49812749/156910605-7f9a3aaf-7922-44a6-b887-3bc9ccb0446e.png)
+
 
 # Athens Attractions
 
