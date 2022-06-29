@@ -44,7 +44,8 @@ export default function Sidebar() {
 
                 {/* Sidebar header and options */}
                 <div className='pb-10 '>
-                    <h4 className='dark:text-white'>Sort by </h4>
+                    <h4 className='dark:text-white'>Sort by 
+                    </h4>
                     {Options.map(({header, options}, i) => {
                         return (
                             <Select header={header} options={options} key={i} />
